@@ -1,6 +1,7 @@
 <?php
 
 use App\RobotFactory\FactoryRobot;
+use App\RobotFactory\MergeRobot;
 use App\RobotFactory\Robot1;
 use App\RobotFactory\Robot2;
 
@@ -16,3 +17,14 @@ echo '<pre>';
 
 var_dump($factory->createRobot1(5));
 var_dump($factory->createRobot2(2));
+
+
+$mergeRobot = new MergeRobot();
+$mergeRobot ->addRobot(new Robot2(40, 160, 8));
+$mergeRobot ->addRobot($factory->createRobot2(2));
+
+
+var_dump($mergeRobot);
+
+//$factory->addType($mergeRobot );
+//$res = reset($factory->createMergeRobot(1));

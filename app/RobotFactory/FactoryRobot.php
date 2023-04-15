@@ -6,6 +6,7 @@ class FactoryRobot
 {
 
     private array $types = [];
+    private array $robots =[];
 
     public function addType($object): void
     {
