@@ -30,9 +30,7 @@ class MergeRobot
                 $this->height += $value->height;
 
             }
-            //$this->robots[] = $object;
         }
-        //parent::addType($object);
 
     }
 

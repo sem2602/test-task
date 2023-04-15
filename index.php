@@ -24,7 +24,18 @@ $mergeRobot ->addRobot(new Robot2(40, 160, 8));
 $mergeRobot ->addRobot($factory->createRobot2(2));
 
 
-var_dump($mergeRobot);
+//var_dump($mergeRobot);
 
-//$factory->addType($mergeRobot );
-//$res = reset($factory->createMergeRobot(1));
+$factory->addType($mergeRobot);
+$res = $factory->createMergeRobot(1);
+$res = reset($res);
+
+//var_dump($res);
+echo '<br>';
+//Результатом роботи методу буде мінімальна швидкість з усіх об’єднаних роботів
+echo $res->getSpeed();
+echo '<br>';
+// Результатом роботи методу буде сума всіх ваг об’єднаних роботів
+echo $res->getWeight();
+echo '<br>';
+echo $res->getHeight();

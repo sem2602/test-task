@@ -30,4 +30,12 @@ class FactoryRobot
         return $return;
     }
 
+    public function createMergeRobot(int $count = 1): array
+    {
+
+        for($i = 0; $i < $count; $i++) $return[] = $this->types['MergeRobot'];
+        return $return;
+
+    }
+
 }
